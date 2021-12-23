@@ -37,6 +37,9 @@
             --font-noto: 'Noto Sans KR';
             --font-pop: 'Poppins';
 
+            /*font weight*/
+            --weight-600: 600;
+
         }
         a:link, a:hover, a:visited {text-decoration:none;}
 	    ul, li {margin:0;padding:0;list-style-type:none;}
@@ -45,21 +48,28 @@
         nav{height: 80px;align-items: center;border-bottom: 1px solid var(--color-white);}
         #logoImg{height: 23px; width: 120px;}
         .navMenu{width: 541px;font-size: var(--font-size-l);margin-right: 95px;}
-        .navMenu>li a{color: var(--color-white);}
+        .navMenu>li a{color: var(--color-white);font-weight: var(--weight-600);}
         .navLanguage{width: 42px;}
-        .navLanguage>li a{font-size: var(--font-size-xs);color: var(--color-white);}
-        .subMenuList{border-left: 1px solid var(--color-lightgray);width: 10%;padding:20px 0 0 15px;}
-        .subMenu>ul li:not(:first-of-type){font-size: var(--font-size-s);}
-        .subTitle{font-size: var(--font-size-m);}
-        .text{color: var(--color-white);width: 1061px;}
-
+        .navLanguage>li a{font-size: var(--font-size-xs);color: var(--color-white);font-weight: var(--weight-600);}
+        .subMenuList{border-left: 1px solid var(--color-lightgray);width: 10%;padding:20px 0 0 15px;height: 300px;}
+        .subMenuList>li{padding-bottom: 10px;}
+        
+      
+        .subMenu{background-color: var(--color-white);}
+        .subMenuList li:not(:first-of-type){font-size: var(--font-size-s);color: var(--color-deepgray);}
+        .subMenuList li:not(:first-of-type) a{color: var(--color-mediumlightgray);}
+        .subTitle{font-size: var(--font-size-m);font-weight: var(--weight-600);color: var(--color-deepgray);}
+        .text{color: var(--color-white);width: 70%;margin:0 auto;font-family: var(--font-pop);}
+        .videoText{font-size: 3.75rem;font-weight: 700;}
+        .videoLastText{font-size: var(--font-size-s);font-weight: var(--weight-600);}
+        .alignLight{text-align: right;}
 
     </style>
 </head>
 <body>
-    <div style="background-color: #232323;">
+    <div style="background-color: #232323;width: 100%;">
         <nav>
-            <a><img src="/src/main/resources/static/img/logo_white.png" id="logoImg"/></a>
+            <a href="#"><img src="/src/main/resources/static/img/logo_white.png" id="logoImg"/></a>
             <ul class="navMenu">
                 <li>
                     <a href="#">About</a>
@@ -95,37 +105,37 @@
         <div class="subMenu">
             <ul style="width: 20%;"></ul>
             <ul class="subMenuList">
-                <li class="subTitle"><a href="#">About</a></li>
+                <li><a class="subTitle" href="#">About</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
             </ul>
             <ul class="subMenuList">
-                <li class="subTitle"><a href="#">Portfolio</a></li>
+                <li><a class="subTitle" href="#">Portfolio</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
             </ul>
             <ul class="subMenuList">
-                <li class="subTitle"><a href="#">Product</a></li>
+                <li><a class="subTitle" href="#">Product</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
             </ul>
             <ul class="subMenuList">
-                <li class="subTitle"><a href="#">Technology</a></li>
+                <li><a class="subTitle"href="#">Technology</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
             </ul>
             <ul class="subMenuList">
-                <li class="subTitle"><a href="#">News</a></li>
+                <li><a class="subTitle" href="#">News</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
             </ul>
-            <ul class="subMenuList">
-                <li class="subTitle"><a href="#">Contact</a></li>
+            <ul class="subMenuList" style="border-right: 1px solid var(--color-lightgray);"> 
+                <li><a class="subTitle" href="#">Contact</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
                 <li><a href="#">임시</a></li>
@@ -133,14 +143,14 @@
             <ul style="width: 20%;"></ul>
         </div>
         <div>
-            <video autoplay loop muted>
-               <source src="img/adminbgvideo.mp4" type="video/mp4"/>
+            <video width="100%" autoplay loop muted>
+               <source src="/src/main/resources/static/img/adminbgvideo.mp4" type="video/mp4"/>
            </video>
         </div>
         <div class="text">
-            <div>A NEW FUTURE</div>
-            <div>CONNECTS METAVERSE</div>
-            <div>메타버스 세계를 잇는 새로운 미래</div>
+            <div class="videoText">A NEW FUTURE</div>
+            <div class="videoText alignLight">CONNECTS --- METAVERSE</div>
+            <div class="videoLastText alignLight">메타버스 세계를 잇는 새로운 미래</div>
         </div>
     </div>
     <div>
