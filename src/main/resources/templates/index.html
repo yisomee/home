@@ -32,6 +32,7 @@
             --font-size-l: 0.88rem;/*14px*/
             --font-size-m: 0.81rem;/*13px*/
             --font-size-s: 0.75rem;/*12px*/
+            --font-size-10: 0.36rem;
             --font-size-xs: 0.56rem;/*9px*/
             
 
@@ -43,6 +44,7 @@
             --weight-600: 600;
             --weight-700: 700;
         }
+        body{font-family: var(--font-pop);}
         a:link, a:hover, a:visited {text-decoration:none;}
 	    ul, li {margin:0;padding:0;list-style-type:none;}
         /* nav */
@@ -67,9 +69,22 @@
         .videoLastText{font-size: var(--font-size-s);font-weight: var(--weight-600);}
         .alignLight{text-align: right;}
 
-        .d-flex{width: 56%;margin: 0 auto; font-size: var(--font-size-xxl);font-weight: var(--weight-700);font-family: var(--font-pop);}
+        .d-flex{width: 56%;margin: 0 auto; font-size: var(--font-size-xxl);font-weight: var(--weight-700);font-family: var(--font-pop);margin-bottom: 30px;}
+        .pfSection{color: var(--color-white);}
         .pfImg{width: 340px; height: 250px;}
-        .contentCon{display: flex;justify-content: space-evenly;margin-top: 25px;}
+        .imgTag{background-color: var(--color-blue);width: 80px;height: 20px;color: var(--color-white);font-size: var(--font-size-s);text-align: center;position: relative;top: 20px;}
+        .pfDate{font-size: var(--font-size-10);color: var(--color-white);}
+        .pfInfo{font-size:18px; color: var(--color-white);}
+        .pfText{position: relative; top: -54px;left: 22px;}
+        .outerCon{width: 100%; overflow: hidden;}
+        .contentCon{display: flex;position: relative;/*right: -950px;*/}
+        .contentCon>div{margin-right: 20px;}
+
+
+
+
+        #incubatingImg{width: 1033px; height: 338px;}
+        .incubatingSection{text-align: center;}
     </style>
 </head>
 <body>
@@ -161,80 +176,82 @@
             <div class="videoLastText alignLight">메타버스 세계를 잇는 새로운 미래</div>
         </div>
     </div>
-    <div style="padding-top: 170px;">
-        <div class="d-flex justify-content-between">
-            <div>Portfolio</div>
-            <div>more</div>
-        </div>
-        <div class="outerCon">
-            <div class="contentCon">
-                <div>
-                    <div>VR Store</div>
-                    <img src="/src/main/resources/static/img/portfolio1.png" class="pfImg"/>
-                    <ul>
-                        <li>2021.10.25</li>
-                        <li>국내 유일</li>
-                    </ul>
-                </div>
-                <div>
-                    <div>AR Sunglass</div>
-                    <img src="/src/main/resources/static/img/portfolio2.png" class="pfImg"/>
-                    <ul>
-                        <li>2021.10.25</li>
-                        <li>얼굴 인식 기반</li>
-                    </ul>
-                </div>
-                <div>
-                    <div>AR Watch</div>
-                    <img src="/src/main/resources/static/img/portfolio3.png" class="pfImg"/>
-                    <ul>
-                        <li>2021.10.25</li>
-                        <li>이미지 인식 기반</li>
-                    </ul>
-                </div>
-                <div>
-                    <div>Drone</div>
-                    <img src="/src/main/resources/static/img/portfolio4.png" class="pfImg"/>
-                    <ul>
-                        <li>2021.10.25</li>
-                        <li>드론을 이용 도로점유현황</li>
-                    </ul>
+    <div class="totalBackground">
+        <div style="padding: 150px 0;background-color: var(--color-deepgray);">
+            <div class="d-flex justify-content-between pfSection">
+                <div>Portfolio</div>
+                <div>more</div>
+            </div>
+            <div class="outerCon">
+                <div class="contentCon">
+                    <div>
+                        <div class="imgTag vr">VR Store</div>
+                        <img src="/src/main/resources/static/img/portfolio1.png" class="pfImg"/>
+                        <ul class="pfText">
+                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfInfo">국내 유일</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="imgTag ar">AR Sunglass</div>
+                        <img src="/src/main/resources/static/img/portfolio2.png" class="pfImg"/>
+                        <ul class="pfText">
+                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfInfo">얼굴 인식 기반</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="imgTag">AR Watch</div>
+                        <img src="/src/main/resources/static/img/portfolio3.png" class="pfImg"/>
+                        <ul class="pfText">
+                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfInfo">이미지 인식 기반</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="imgTag">Drone</div>
+                        <img src="/src/main/resources/static/img/portfolio4.png" class="pfImg"/>
+                        <ul class="pfText">
+                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfInfo">드론을 이용 도로점유현황</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>  
-    <div>
-        <div class="d-flex justify-content-between">
-            <div>yellotail is</div>
-            <div>more</div>
-        </div>
-        <div><img src=""/></div>
-    </div>
-    <div>
+        </div>  
         <div>
-            <span>yellotail</span>is a creative technology lab that delivers ground experiences through web<br/> 
-            and mobile development, user experience design and innovative engineering services.
+            <div class="d-flex justify-content-between">
+                <div><span style="color:var(--color-blue);">yellotail</span> is</div>
+                <div>more</div>
+            </div>
+            <div class="incubatingSection"><img src="/src/main/resources/static/img/yellotail_incubating.png" id="incubatingImg"/></div>
         </div>
-    </div>
-    <div>
-        <div>Clients</div>
-        <ul class="d-flex flex-nowrap">
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-        </ul>
+        <div>
+            <div>
+                <span>yellotail</span>is a creative technology lab that delivers ground experiences through web<br/> 
+                and mobile development, user experience design and innovative engineering services.
+            </div>
+        </div>
+        <div>
+            <div>Clients</div>
+            <ul class="d-flex flex-nowrap">
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+            </ul>
+        </div>
     </div>
     <footer>
         <div><img src=""/></div>
