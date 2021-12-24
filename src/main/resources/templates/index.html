@@ -89,11 +89,22 @@
         #banner{width: 100%; height: 265px;}
         #bannerText{font-weight: 400;font-size: 20px;text-align: center;position: relative;top: 165px;color: var(--color-white);}
 
-        .clintsSection{margin: 70px 0;}
+        .clintsSection{margin-top: 130px;}
         #clients{font-size: var(--font-size-xxl);font-weight: var(--weight-700);width: 56%;margin: 0 auto;}
-        .clintsList{display: flex;width:56%; flex-wrap: wrap; margin: 0 auto;}
+        .clintsList{display: flex;justify-content: center; width:57%; flex-wrap: wrap; margin: 0 auto;}
         /* .clintsList>li{width: 20%;display: flex;flex-wrap: wrap;} */
-        .clintsList>li img{width: 156.8px; height: 80px;margin:20px 20px;}
+        .clintsList>li img{width: 156.8px; height: 80px;margin:25px 30px;}
+        .topBtn{width: 56%;text-align: end;margin: 0 auto;font-size: 2em;padding: 110px 18px 40px 0;}
+
+        #footerLogo{width: 120px;height: 23px;}
+        footer{background-color: var(--color-darkgray);color: var(--color-white);font-size: 15px;}
+        .footerTotal{display: flex;width: 56%;margin: 0 auto;padding: 52px 0;}
+        .footerTop, .footerList{display: flex;justify-content: space-between;}
+        .footerList{width: 32%;}
+        .footerList>li a{color: var(--color-white);}
+        .footerTop>div button{background-color: var(--color-darkgray);border: 1px solid white;border-radius: 6px; color: white;padding:10px 50px}
+        .footerInfo{width: 80%;padding-left: 62px;}
+        #footerEmail{border-bottom: 1px solid white;padding-bottom: 18px;margin-bottom: 18px;}
     </style>
 </head>
 <body>
@@ -261,32 +272,26 @@
                 <li><img src="/src/main/resources/static/img/client_cjolive.png" alt=""></li>
                 <li><img src="/src/main/resources/static/img/client_doosan-infracore.png" alt=""></li>
             </ul>
+            <div class="topBtn">▲</div>
         </div>
     </div>
     <footer>
-        <div><img src=""/></div>
-        <div>
-            <div>
-                <ul>
-                    <li>찾아오시는 길</li>
-                    <li>|</li>
-                    <li>개인정보처리방침</li>
-                    <li>|</li>
-                    <li>문의하기</li>
-                </ul>
-                <div><button>문의하기</button></div>
+        <div class="footerTotal">
+            <div><img src="/src/main/resources/static/img/logo_white.png" id="footerLogo"/></div>
+            <div class="footerInfo">
+                <div class="footerTop">
+                    <ul class="footerList">
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li>|</li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <div><button>문의 하기</button></div>
+                </div>
+                <div>서울 성동구 성수일로4길 25, 19층</div>             
+                <div>TEL : 02-465-3737</div>
+                <div id="footerEmail">EMAIL : info@yellotail.com</div>
+                <div>Copyrights © 2017 All Rights Reserved by Yellotail.</div>
             </div>
-            <div>
-                <div>서울 성동구 성수일로4길 25, 19층</div>
-                <ul>
-                    <li>아이콘</li>
-                    <li>아이콘</li>
-                </ul>
-            </div>
-            <div>TEL : 02-465-3737</div>
-            <div>EMAIL : info@yellotail.com</div>
-            <hr/>
-            <div>Copyrights © 2017 All Rights Reserved by Yellotail.</div>
         </div>
     </footer>
 </body>
