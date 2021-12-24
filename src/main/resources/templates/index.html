@@ -28,7 +28,7 @@
             --color-lightblue: #5BD9FF;
             
             /* size */
-            --font-size-xxl: 1rem;/*28px*/
+            --font-size-xxl: 28px;/*28px*/
             --font-size-l: 0.88rem;/*14px*/
             --font-size-m: 0.81rem;/*13px*/
             --font-size-s: 0.75rem;/*12px*/
@@ -74,17 +74,26 @@
         .pfImg{width: 340px; height: 250px;}
         .imgTag{background-color: var(--color-blue);width: 80px;height: 20px;color: var(--color-white);font-size: var(--font-size-s);text-align: center;position: relative;top: 20px;}
         .pfDate{font-size: var(--font-size-10);color: var(--color-white);}
-        .pfInfo{font-size:18px; color: var(--color-white);}
-        .pfText{position: relative; top: -54px;left: 22px;}
+        .pfInfo{font-size:18px; color: var(--color-white);font-family: var(--font-noto); font-weight: 700;}
+        .pfText{position: relative; top: -55px;left: 22px;}
         .outerCon{width: 100%; overflow: hidden;}
-        .contentCon{display: flex;position: relative;/*right: -950px;*/}
+        .contentCon{display: flex;position: relative;right: -950px;}
         .contentCon>div{margin-right: 20px;}
 
 
 
-
-        #incubatingImg{width: 1033px; height: 338px;}
+        .yellotailIs{padding: 140px 0 50px 0;margin: 0 auto;}
+        #incubatingImg{width: 1033px; height: 338px;margin-bottom: 150px;}
         .incubatingSection{text-align: center;}
+
+        #banner{width: 100%; height: 265px;}
+        #bannerText{font-weight: 400;font-size: 20px;text-align: center;position: relative;top: 165px;color: var(--color-white);}
+
+        .clintsSection{margin: 70px 0;}
+        #clients{font-size: var(--font-size-xxl);font-weight: var(--weight-700);width: 56%;margin: 0 auto;}
+        .clintsList{display: flex;width:56%; flex-wrap: wrap; margin: 0 auto;}
+        /* .clintsList>li{width: 20%;display: flex;flex-wrap: wrap;} */
+        .clintsList>li img{width: 156.8px; height: 80px;margin:20px 20px;}
     </style>
 </head>
 <body>
@@ -220,36 +229,37 @@
             </div>
         </div>  
         <div>
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between yellotailIs">
                 <div><span style="color:var(--color-blue);">yellotail</span> is</div>
                 <div>more</div>
             </div>
             <div class="incubatingSection"><img src="/src/main/resources/static/img/yellotail_incubating.png" id="incubatingImg"/></div>
         </div>
         <div>
-            <div>
-                <span>yellotail</span>is a creative technology lab that delivers ground experiences through web<br/> 
+            <div id="bannerText">
+                <span style="color: var(--color-yellow);">yellotail</span> is a creative technology lab that delivers ground experiences through web<br/> 
                 and mobile development, user experience design and innovative engineering services.
             </div>
+            <div><img src="/src/main/resources/static/img/banner.png" id="banner"></div>
         </div>
-        <div>
-            <div>Clients</div>
-            <ul class="d-flex flex-nowrap">
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
+        <div class="clintsSection">
+            <div id="clients">Clients</div>
+            <ul class="clintsList">
+                <li><img src="/src/main/resources/static/img/client_unity.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_ptc.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_lg.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_ebay.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_dahan.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_samsung.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_doosan.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_lgchem.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_yonsei.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_gs.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_kai.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_daewoo.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_korea.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_cjolive.png" alt=""></li>
+                <li><img src="/src/main/resources/static/img/client_doosan-infracore.png" alt=""></li>
             </ul>
         </div>
     </div>
