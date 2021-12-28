@@ -55,20 +55,21 @@
         
         .backgroundSection{background-color: #F3F5F7;}
         #con2Title{font-family: var(--font-noto);font-weight: 700; font-size: 1.75rem;}
-        .con2Text{font-family: var(--font-noto);font-weight: 400;font-size: 1.13rem;padding: 150px 0 80px 0;}
+        .con2Text{font-family: var(--font-noto);font-weight: 400;font-size: 1.13rem;padding: 150px 0 90px 0;}
 
         .arListTitle{font-size: 1.75rem;font-weight: 400;text-align: center;padding-bottom: 38px;}
-        .arListCon{display: flex;flex-wrap: wrap;/*width: 40%;margin: 0 auto;*/}
-        /* .arList{padding:20px 10px;} */
+     
         .arList, .purposeList{display: flex;flex-direction: column; align-items: center;background-color: white;border-radius: 20px;box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);}
+        .list{display: flex;justify-content: center;margin:15px 0;}
+        .list>ul{margin: 0 10px;width: 20%;padding:30px 0;}
         /* .purposeTotal{margin: 0 auto;} */
         #purposeTitle, .purposeCon, .industryCon, .con2Text{margin: 0 auto;width: 64%;}
-        #purposeTitle{font-size: 1.75rem;font-weight: 500;text-align: center;}
-        .purposeCon{display: flex;justify-content: space-between;}
+        #purposeTitle{font-size: 1.75rem;font-weight: 500;text-align: center;padding: 100px 0 65px 0;}
+        .purposeCon{display: flex;justify-content: space-between; padding-bottom: 150px;}
         .purposeList{width: 17%;padding: 50px 0;}
         /* .industryCon{width: 50%;} */
 
-        #title_last{font-family: var(--font-noto);font-size: 1.13rem;}
+        #title_last{font-family: var(--font-noto);font-size: 1.13rem;padding: 150px 0 70px 0;}
 
         .systemCon{display: flex;background-color: #EAEAEA;box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);border-radius: 20px;}
         .sysList1, .sysList2{display: flex;}
@@ -81,6 +82,8 @@
         .purposeMain{font-family: var(--font-noto); font-weight: 700;margin: 20px 0 10px 0;}
         .textalign{text-align: center;}
         /* .systemList{display: flex; flex-direction: column;} */
+        .sysTotalCon{width: 64%;margin: 0 auto;}
+    
     </style>
 </head>
 <body>
@@ -122,75 +125,81 @@
         <div class="industryCon">
             <div class="arListTitle">산업의 모든 운영 라이프의 가치를 <span style="font-weight: 700;">AR DT시스템으로 지원합니다</span></div>
             <div class="arListCon">
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar1.png"/></li>
-                    <li>
-                        산업, 건설 현장 3D<br/>
-                        AR DT 시스템 구현
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar2.png"/></li>
-                    <li>
-                        현장 운영<br/>
-                        효율성 향상
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar3.png"/></li>
-                    <li>
-                        설계 BIM<br/>
-                        3D모델링 뷰어
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar4.png"/></li>
-                    <li>
-                        개체 네비게이션
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar5.png"/></li>
-                    <li>
-                        현장 Punch Tool<br/>
-                        데이터연동
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar6.png"/></li>
-                    <li>
-                        데이터 접근 및<br/>
-                        확장성
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar7.png"/></li>
-                    <li>
-                        클라우드<br/>
-                        시스템 지원
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar8.png"/></li>
-                    <li>
-                        모든 ERP데이터<br/>
-                        현장 Viewer
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar9.png"/></li>
-                    <li>
-                        이종 APP간<br/>
-                        데이터 연동
-                    </li>
-                </ul>
-                <ul class="arList">
-                    <li><img src="/src/main/resources/static/img/about/ic_ar10.png"/></li>
-                    <li>
-                        프로젝트별,<br/>
-                        지역별 확장성
-                    </li>
-                </ul>
+                <div class="list">
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar1.png"/></li>
+                        <li>
+                            산업, 건설 현장 3D<br/>
+                            AR DT 시스템 구현
+                        </li>
+                    </ul>
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar2.png"/></li>
+                        <li>
+                            현장 운영<br/>
+                            효율성 향상
+                        </li>
+                    </ul>
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar3.png"/></li>
+                        <li>
+                            설계 BIM<br/>
+                            3D모델링 뷰어
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar4.png"/></li>
+                        <li>
+                            개체 네비게이션
+                        </li>
+                    </ul>
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar5.png"/></li>
+                        <li>
+                            현장 Punch Tool<br/>
+                            데이터연동
+                        </li>
+                    </ul>
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar6.png"/></li>
+                        <li>
+                            데이터 접근 및<br/>
+                            확장성
+                        </li>
+                    </ul>
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar7.png"/></li>
+                        <li>
+                            클라우드<br/>
+                            시스템 지원
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar8.png"/></li>
+                        <li>
+                            모든 ERP데이터<br/>
+                            현장 Viewer
+                        </li>
+                    </ul>
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar9.png"/></li>
+                        <li>
+                            이종 APP간<br/>
+                            데이터 연동
+                        </li>
+                    </ul>
+                    <ul class="arList">
+                        <li><img src="/src/main/resources/static/img/about/ic_ar10.png"/></li>
+                        <li>
+                            프로젝트별,<br/>
+                            지역별 확장성
+                        </li>
+                    </ul>
+                </div>
            </div>
         </div>
         <div class="purposeTotal">
@@ -241,7 +250,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="sysTotalCon">
         <div id="title_last">
             <span style="font-weight: 700;font-size: 1.75rem;">ATLAS Digital Transformation Solution System</span><br/>
             산업의 모든 운영 라이프의 가치를 AR DT 시스템으로 지원합니다
