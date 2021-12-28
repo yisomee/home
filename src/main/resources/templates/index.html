@@ -61,14 +61,14 @@
         .subMenuList{border-left: 1px solid var(--color-lightgray);width: 10%;padding:20px 0 0 15px;height: 300px;}
         .subMenuList>li{padding-bottom: 10px;}
         
-        /* .videoCon{width: 100vw;} */
+        
       
         .subMenu{background-color: var(--color-white);border-bottom: 1px solid var(--color-lightgray);}
         .subMenuList li:not(:first-of-type){font-size: var(--font-size-s);color: var(--color-deepgray);}
         .subMenuList li:not(:first-of-type) a{color: var(--color-mediumlightgray);}
         .subTitle{font-size: var(--font-size-m);font-weight: var(--weight-600);color: var(--color-deepgray);}
         .subTitle:hover{color:var(--color-deepgray);}
-        .text{color: var(--color-white);width: 56%;margin:0 auto;font-family: var(--font-pop);position: relative; top: -330px;}
+        .text{color: var(--color-white);width: 56%;margin:0 auto;font-family: var(--font-pop);position: relative; top: -576px;}
         .videoText{font-size: 3.75rem;font-weight: 700;}
         .videoLastText{font-size: var(--font-size-s);font-weight: var(--weight-600);}
         .alignLight{text-align: right;}
@@ -87,7 +87,7 @@
 
         #more{font-size: 16px;}
         .moreBtn{width: 12px; height: 12px;}
-        .yellotailIs{padding: 140px 0 50px 0;margin: 0 auto;}
+        .yellotailIs{padding: 100px 0 50px 0;margin: 0 auto;}
         #incubatingImg{width: 1033px; height: 338px;margin-bottom: 150px;}
         .incubatingSection{text-align: center;}
 
@@ -122,7 +122,9 @@
         subMenuList > li > a:before { content:""; position: absolute; right: 50%; bottom: 0; width: 0; height: 4px; background-color: aqua; transition: all .5s; } 
         subMenuList > li > a:hover:after { width: 50% } 
         subMenuList > li > a:hover:before { width: 50% } */
-
+        #video{object-fit:fill;}
+        video{width: 100%; height: 100%;}
+        .videoCon{height: 100vh;width: 100%;overflow: hidden;}
     
     </style>
     <script type="text/javascript">  
@@ -148,7 +150,7 @@
                     $('.totalBackground').css("background-color","#232323");
                     $('.pfSection').css("color","white");
                     $('.moreBtn').attr('src','/src/main/resources/static/img/main/btn_more_white.png');
-                    $('#animateCon').animate({marginLeft:"-550px"}, 1000);
+                    $('#animateCon').animate({marginLeft:"-530px"}, 1000);
                 }
                 if(position > 900 || position < 500){
                     $('.totalBackground').css("background-color","white");
@@ -255,8 +257,8 @@
             </div>
         </div>
         <div class="videoCon">
-            <video width="100%" autoplay loop muted>
-               <source src="/src/main/resources/static/img/main/adminbgvideo.mp4" type="video/mp4"/>
+            <video id="video" autoplay loop muted>
+               <source src="/src/main/resources/static/img/main/main.mp4" type="video/mp4"/>
            </video>
         </div>
         <div class="text">
