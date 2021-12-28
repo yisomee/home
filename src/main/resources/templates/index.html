@@ -58,7 +58,7 @@
         .navMenu>li a{color: var(--color-white);font-weight: var(--weight-600);padding:0 29px 27px 29px;}
         .navLanguage{width: 42px;}
         .navLanguage>li a{font-size: var(--font-size-xs);color: var(--color-white);font-weight: var(--weight-600);}
-        .subMenuList{border-left: 1px solid var(--color-lightgray);width: 10%;padding:20px 0 0 15px;height: 300px;}
+        .subMenuList{border-left: 1px solid var(--color-lightgray);width: 10%;padding:20px 0 0 15px;height: 160px;}
         .subMenuList>li{padding-bottom: 10px;}
         
         
@@ -83,6 +83,7 @@
         .outerCon{width: 100%; overflow: hidden;}
         .contentCon{display: flex;position: relative;right: -950px;}
         .contentCon>div{margin-right: 20px;}
+        .totalBackground{background-color: white;}
 
 
         #more{font-size: 16px;}
@@ -91,10 +92,12 @@
         #incubatingImg{width: 1033px; height: 338px;margin-bottom: 150px;}
         .incubatingSection{text-align: center;}
 
-        #banner{width: 100%; height: 265px;}
-        #bannerText{font-weight: 400;font-size: 20px;text-align: center;position: relative;top: 165px;color: var(--color-white);}
+        #banner{width: 100%; height: 100vh; }
+        #bannerBox{position: fixed;top:0;z-index: -2;}
+        #bannerText{font-weight: 400;font-size: 20px;text-align: center;color: var(--color-white);position: fixed;top:400px;left:500px;z-index: -1;}
+        #blank{height: 800px;position: relative;z-index: -2;}
 
-        .clintsSection{margin-top: 130px;}
+        .clintsSection{padding-top: 130px;background-color: white;}
         #clients{font-size: var(--font-size-xxl);font-weight: var(--weight-700);width: 56%;margin: 0 auto;}
         .clintsList{display: flex;justify-content: space-between; width:58%; flex-wrap: wrap; margin: 0 auto;}
         .clintsList>li img{width: 156.8px; height: 80px;/*margin: 25px 56px 25px 0;*/margin: 25px 20px;}
@@ -117,14 +120,11 @@
         .subMenu ul li {position: relative;} 
         .subMenuList li:not(:first-of-type)::after {position: absolute; content:""; display: block; border-bottom: 2px solid var(--color-darkgray); transition: width 250ms ease-in-out;/*left: auto;*/ width: 0;} 
         .subMenuList li:not(:first-of-type):hover::after {width: 20%;}
-        /* #index_wrap ul {display: block; margin-bottom: 50px;} #index_wrap ul li {position: relative; display: inline-block; margin: 0 20px; height: 40px; text-align: center; line-height: 30px; cursor: pointer;} #index_wrap ul p {font-size: 1.1rem; font-weight:800;} #index_wrap ul li a {color: #000;} */
-        /* subMenuList > li > a:after { content:""; position: absolute; left: 50%; bottom: 0; width: 0; height: 4px; background-color: aqua; transition: all .5s; } 
-        subMenuList > li > a:before { content:""; position: absolute; right: 50%; bottom: 0; width: 0; height: 4px; background-color: aqua; transition: all .5s; } 
-        subMenuList > li > a:hover:after { width: 50% } 
-        subMenuList > li > a:hover:before { width: 50% } */
+
         #video{object-fit:fill;}
         video{width: 100%; height: 100%;position: relative;top: -128px;}
-        .videoCon{height: 80vh;width: 100%;overflow: hidden;}
+        .videoCon{height: 80vh;width: 100%;overflow: hidden;background-color: white;}
+        
     
     </style>
     <script type="text/javascript">  
@@ -134,6 +134,7 @@
         
                 var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다. 
                 console.log(position);
+                console.log("ff");
                 //스크롤 시 nav색 변경
                 if (position >= 100){               
                     $('nav').css("background-color","white").css("border-bottom","1px solid #C4C4C4");
@@ -145,14 +146,14 @@
                     $('.navMenu>li a, .navLanguage>li a').css("color","white");
                     $('#logoImg').attr("src", "/src/main/resources/static/img/main/logo_white.png");
                 }
-                //500 넘으면 portfolio background 변경
-                if(position > 430){
+                //200 넘으면 portfolio background 변경
+                if(position > 200){
                     $('.totalBackground,.videoCon').css("background-color","#232323");
                     $('.pfSection').css("color","white");
                     $('.moreBtn').attr('src','/src/main/resources/static/img/main/btn_more_white.png');
                     $('#animateCon').animate({marginLeft:"-530px"}, 1000);
                 }
-                if(position > 900 || position < 500){
+                if(position > 480 || position < 200){
                     $('.totalBackground,.videoCon').css("background-color","white");
                     $('.pfSection').css("color","#333333");
                     $('.moreBtn').attr('src','/src/main/resources/static/img/main/btn_more.png')
@@ -268,7 +269,7 @@
                 <div class="videoLastText alignLight">메타버스 세계를 잇는 새로운 미래</div>
             </div>
         </div>
-
+    
     <div class="totalBackground">
         <div style="padding-bottom:200px;">
             <div class="d-flex justify-content-between pfSection">
@@ -319,35 +320,37 @@
             </div>
             <div class="incubatingSection"><img src="/src/main/resources/static/img/main/yellotail_incubating.png" id="incubatingImg"/></div>
         </div>
-        <div>
-            <div id="bannerText">
-                <span style="color: var(--color-yellow);">yellotail</span> is a creative technology lab that delivers ground experiences through web<br/> 
-                and mobile development, user experience design and innovative engineering services.
-            </div>
-            <div><img src="/src/main/resources/static/img/main/banner.png" id="banner"></div>
-        </div>
-        <div class="clintsSection">
-            <div id="clients">Clients</div>
-            <ul class="clintsList">
-                <li><img src="/src/main/resources/static/img/main/client_unity.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_ptc.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_lg.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_ebay.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_dahan.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_samsung.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_doosan.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_lgchem.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_yonsei.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_gs.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_kai.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_daewoo.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_korea.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_cjolive.png" alt=""></li>
-                <li><img src="/src/main/resources/static/img/main/client_doosan-infracore.png" alt=""></li>
-            </ul>
-            <div class="topBtn"><a href="#top"><img src="/src/main/resources/static/img/main/btn_top.png" id="logoImg" style="width: 50px; height: 50px;"/></a></div>
-        </div>
     </div>
+    <div class="bannerCon">
+        <div id="bannerText">
+            <span style="color: var(--color-yellow);">yellotail</span> is a creative technology lab that delivers ground experiences through web<br/> 
+            and mobile development, user experience design and innovative engineering services.
+        </div>
+        <div id="bannerBox"><img src="/src/main/resources/static/img/main/banner2.jpg" id="banner"></div>
+    </div>
+    <div id="blank"></div>
+    <div class="clintsSection">
+        <div id="clients">Clients</div>
+        <ul class="clintsList">
+            <li><img src="/src/main/resources/static/img/main/client_unity.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_ptc.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_lg.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_ebay.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_dahan.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_samsung.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_doosan.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_lgchem.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_yonsei.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_gs.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_kai.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_daewoo.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_korea.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_cjolive.png" alt=""></li>
+            <li><img src="/src/main/resources/static/img/main/client_doosan-infracore.png" alt=""></li>
+        </ul>
+        <div class="topBtn"><a href="#top"><img src="/src/main/resources/static/img/main/btn_top.png" id="logoImg" style="width: 50px; height: 50px;"/></a></div>
+    </div>
+    
     <footer>
         <div class="footerTotal">
             <div><img src="/src/main/resources/static/img/main/logo_white.png" id="footerLogo"/></div>
