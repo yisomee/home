@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>about</title>
     <style>
          :root{
             /* color */
@@ -40,7 +40,27 @@
             --weight-700: 700;
         }
         ul, li {margin:0;padding:0;list-style-type:none;}
+        a:link, a:hover, a:visited {text-decoration:none;}
         body{margin: 0 auto;font-family: var(--font-pop);}
+        /* nav */
+        nav, .navMenu, .navLanguage, .subMenu{display: flex;flex-direction: row;justify-content: space-around;font-family: var(--font-pop);}
+        nav{height: 80px;align-items: center;border-bottom: 1px solid #C4C4C4;}
+        .navTotal{width: 100%;}
+        #logoImg{height: 23px; width: 120px;}
+        .navMenu{/*width: 541px;*/width: 36%;font-size: var(--font-size-l);margin-right: 95px;}
+        /* .navMenu>li a{width: 16%;} */
+        .navMenu>li a{color: #333333;font-weight: var(--weight-600);padding:0 29px 27px 29px;}
+        .navLanguage{width: 42px;}
+        .navLanguage>li a{font-size: var(--font-size-xs);color:#333333;font-weight: var(--weight-600);}
+        .subMenuList{border-left: 1px solid var(--color-lightgray);width: 10%;padding:20px 0 0 15px;height: 160px;}
+        .subMenuList>li{padding-bottom: 10px;}
+        
+        
+      
+        .subMenu{background-color: var(--color-white);border-bottom: 1px solid var(--color-lightgray);}
+        .subMenuList li:not(:first-of-type){font-size: var(--font-size-s);color: var(--color-deepgray);}
+        .subMenuList li:not(:first-of-type) a{color: var(--color-mediumlightgray);}
+
         #aboutBanner{width: 100%; height: 290px;}
         #metaverseImg{width: 100%; height: 500px;}
         #bannerText_big{font-size: 2.81rem;font-weight: var(--weight-600);color: white;}
@@ -69,24 +89,121 @@
         .purposeList{width: 17%;padding: 50px 0;}
         /* .industryCon{width: 50%;} */
 
-        #title_last{font-family: var(--font-noto);font-size: 1.13rem;padding: 150px 0 70px 0;}
+        #title_last{font-family: var(--font-noto);font-size: 1.13rem;padding: 150px 0 50px 0;}
 
-        .systemCon{display: flex;background-color: #EAEAEA;box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);border-radius: 20px;}
-        .sysList1, .sysList2{display: flex;}
+        .systemCon{display: flex;background-color: #EAEAEA;box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);border-radius: 20px;padding: 20px;margin: 25px 0;}
+        .sysList1, .sysList2{display: flex;justify-content: space-between;height: 50%;align-items: center;}
         .sysList1>li, .sysList2>li, .singleList{background-color: white;border-radius: 8px;}
         .imgBack1{background-color: #2260FF;}
         .imgBack2{background-color: #227DFF;}
         .imgBack3{background-color: #00A3FF;}
-        .imgCon{color: white;font-family: var(--font-noto);font-weight: 700;}
+        .imgCon{color: white;font-family: var(--font-noto);font-weight: 700;width: 180px; height: 180px;text-align: center;display: flex;flex-direction: column; justify-content: center;border-radius: 8px;border: 5px solid white;}
+        .imgCon>div img{width: 75px;height: 75px;}
         .purposeImg{width: 65px; height:65px}
         .purposeMain{font-family: var(--font-noto); font-weight: 700;margin: 20px 0 10px 0;}
         .textalign{text-align: center;}
-        /* .systemList{display: flex; flex-direction: column;} */
+        .systemList{width: 81%;margin-left: 20px;display: flex;flex-direction: column;justify-content: space-around;}
         .sysTotalCon{width: 64%;margin: 0 auto;}
+        /* .sysList2>li{flex: 1 1 auto;padding: 20px 0;margin-left:10px;text-align: center;}
+        .sysList1>li{flex: 1 1 auto;padding: 18px 0;margin-left:10px;text-align: center;}
+        .atlas>li{padding: 23px 0;}*/
+        .singleList{padding:28px 0;text-align: center;}
+        .topBtn{text-align: end;margin: 130px 0 60px 0}
+        .sysList2>li, .atlas>li{width: 32.5%;text-align: center;padding: 17px 0;}
+        .user>li{width: 15%;text-align: center;padding: 15px 3px;}
+        
+   
+
+        #footerLogo{width: 120px;height: 23px;}
+        footer{background-color: var(--color-darkgray);color: var(--color-white);font-size: 15px;font-family: var(--font-noto);font-weight: 400;}
+        .footerTotal{display: flex;width: 56%;margin: 0 auto;padding: 52px 0;}
+        .footerTop, .footerList{display: flex;justify-content: space-between;font-size: 15px;}
+        .footerList{width: 30%;}
+        .footerList>li a{color: var(--color-white);}
+        .footerTop>div button{background-color: var(--color-darkgray);border: 1px solid white;border-radius: 6px; color: white;padding:10px 50px;cursor: pointer;}
+        .footerInfo{width: 89%;padding-left: 62px;}
+        #footerEmail{border-bottom: 1px solid white;padding-bottom: 18px;margin-bottom: 18px;}
+
     
     </style>
 </head>
 <body>
+    <div class="navTotal"> 
+        <nav>
+            <a href="/src/main/resources/templates/index.html"><img src="/src/main/resources/static/img/main/logo_black.png" id="logoImg"/></a>
+            <ul class="navMenu">
+                <li>
+                    <a href="/src/main/resources/templates/about.html">About</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Product</a>
+                </li>
+                <li>
+                    <a href="#">Technology</a>
+                </li>
+                <li>
+                    <a href="#">News</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <ul class="navLanguage">
+                <li>
+                    <a href="#">KO</a>
+                </li>
+                <li>
+                    <a href="#">|</a>
+                </li>
+                <li>
+                    <a href="#">EN</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="subMenu" style="display: none;">
+            <ul style="width: 20%;"></ul>
+            <ul class="subMenuList">
+                <li><a class="subTitle" href="#">About</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+            </ul>
+            <ul class="subMenuList">
+                <li><a class="subTitle" href="#">Portfolio</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+            </ul>
+            <ul class="subMenuList">
+                <li><a class="subTitle" href="#">Product</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+            </ul>
+            <ul class="subMenuList">
+                <li><a class="subTitle"href="#">Technology</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+            </ul>
+            <ul class="subMenuList">
+                <li><a class="subTitle" href="#">News</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+            </ul>
+            <ul class="subMenuList" style="border-right: 1px solid var(--color-lightgray);"> 
+                <li><a class="subTitle" href="#">Contact</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+                <li><a href="#">임시</a></li>
+            </ul>
+            <ul style="width: 20%;"></ul>
+        </div>
+    </div>
     <div class="banner">
         <div>
             <img src="/src/main/resources/static/img/about/about_banner.png" id="aboutBanner"/>
@@ -257,9 +374,9 @@
         </div>
         <div>
             <div class="systemCon">
-                <div class="imgBack1 imgCon"><img src="/src/main/resources/static/img/about/ic_user.png"/><br/>USER</div>
+                <div class="imgBack1 imgCon"><div><img src="/src/main/resources/static/img/about/ic_user.png"/></div><div>USER</div></div>
                 <div class="systemList">
-                    <ul class="sysList1">
+                    <ul class="sysList1 user">
                         <li>3D Item<br/>
                             Navigation</li>
                         <li>3D Position<br/>
@@ -284,9 +401,9 @@
                 </div>
             </div>
             <div class="systemCon">
-                <div class="imgBack2 imgCon"><img src="/src/main/resources/static/img/about/ic_atlascore.png"/><br/>ATLAS Core</div>
+                <div class="imgBack2 imgCon"><div><img src="/src/main/resources/static/img/about/ic_atlascore.png"/></div><div>ATLAS Core</div></div>
                 <div class="systemList">
-                    <ul class="sysList1">
+                    <ul class="sysList1 atlas">
                         <li>IDE : Unity3d etc </li>
                         <li>AR Engine : ARFoundation,<br/>
                             Vuforia, Wikitude …</li>
@@ -303,9 +420,9 @@
                 </div>
             </div>
             <div class="systemCon">
-                <div class="imgBack3 imgCon"><img src="/src/main/resources/static/img/about/ic_cloudsystem.png"/><br/>Cloud Back data<br/>System</div>
+                <div class="imgBack3 imgCon"><div><img src="/src/main/resources/static/img/about/ic_cloudsystem.png"/></div><div>Cloud Back data<br/>System</div></div>
                 <div class="systemList">
-                    <div class="singleList">AWS</div>
+                    <div class="singleList colud">AWS</div>
                     <ul class="sysList2">
                         <li>3D data<br/>
                             (BIM 3D)</li>
@@ -317,5 +434,24 @@
         </div>
         <div class="topBtn"><a href="#top"><img src="/src/main/resources/static/img/main/btn_top.png" id="logoImg" style="width: 50px; height: 50px;"/></a></div>
     </div>
+    <footer>
+        <div class="footerTotal">
+            <div><img src="/src/main/resources/static/img/main/logo_white.png" id="footerLogo"/></div>
+            <div class="footerInfo">
+                <div class="footerTop">
+                    <ul class="footerList">
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li>|</li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <div><button>문의 하기</button></div>
+                </div>
+                <div>서울 성동구 성수일로4길 25, 19층</div>             
+                <div>TEL : 02-465-3737</div>
+                <div id="footerEmail">EMAIL : info@yellotail.com</div>
+                <div>Copyrights © 2017 All Rights Reserved by Yellotail.</div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

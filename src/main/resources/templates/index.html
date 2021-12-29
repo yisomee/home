@@ -71,7 +71,7 @@
         .text{color: var(--color-white);width: 56%;margin:0 auto;font-family: var(--font-pop);position: relative; top: -560px;}
         .videoText{font-size: 3.75rem;font-weight: 700;}
         .videoLastText{font-size: var(--font-size-s);font-weight: var(--weight-600);}
-        .alignLight{text-align: right;}
+        .alignRight{text-align: right;}
 
         .d-flex{width: 56%;margin: 0 auto; font-size: var(--font-size-xxl);font-weight: var(--weight-700);font-family: var(--font-pop);margin-bottom: 30px;}
         .pfSection{color: var(--color-mediumgray)}
@@ -92,9 +92,9 @@
         #incubatingImg{width: 1033px; height: 338px;margin-bottom: 150px;}
         .incubatingSection{text-align: center;}
 
-        #banner{width: 100%; height: 100vh; }
+        #banner{width: 100vw; height: 100vh; }
         #bannerBox{position: fixed;top:0;z-index: -2;}
-        #bannerText{font-weight: 400;font-size: 20px;text-align: center;color: var(--color-white);position: fixed;top:400px;left:500px;z-index: -1;}
+        #bannerText{font-weight: 400;font-size: 20px;text-align: center;color: var(--color-white);position: fixed;top:400px;z-index: -1;}
         #blank{height: 800px;position: relative;z-index: -2;}
 
         .clintsSection{padding-top: 130px;background-color: white;}
@@ -183,22 +183,19 @@
 
         <div class="navTotal"> 
             <nav>
-                <a href="#"><img src="/src/main/resources/static/img/main/logo_white.png" id="logoImg"/></a>
+                <a href="/src/main/resources/templates/index.html"><img src="/src/main/resources/static/img/main/logo_white.png" id="logoImg"/></a>
                 <ul class="navMenu">
                     <li>
-                        <a href="#">About</a>
+                        <a href="/src/main/resources/templates/about.html">About</a>
                     </li>
                     <li>
                         <a href="#">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#">Product</a>
+                        <a href="#">Metaverse</a>
                     </li>
                     <li>
                         <a href="#">Technology</a>
-                    </li>
-                    <li>
-                        <a href="#">News</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>
@@ -231,19 +228,13 @@
                     <li><a href="#">임시</a></li>
                 </ul>
                 <ul class="subMenuList">
-                    <li><a class="subTitle" href="#">Product</a></li>
+                    <li><a class="subTitle" href="#">Metaverse</a></li>
                     <li><a href="#">임시</a></li>
                     <li><a href="#">임시</a></li>
                     <li><a href="#">임시</a></li>
                 </ul>
                 <ul class="subMenuList">
                     <li><a class="subTitle"href="#">Technology</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                </ul>
-                <ul class="subMenuList">
-                    <li><a class="subTitle" href="#">News</a></li>
                     <li><a href="#">임시</a></li>
                     <li><a href="#">임시</a></li>
                     <li><a href="#">임시</a></li>
@@ -265,8 +256,8 @@
         <div style="position: absolute;width: 100%;">
             <div class="text">
                 <div class="videoText">A NEW FUTURE</div>
-                <div class="videoText alignLight">CONNECTS <img src="/src/main/resources/static/img/main/main_line.png" style="width: 100px;"/> METAVERSE</div>
-                <div class="videoLastText alignLight">메타버스 세계를 잇는 새로운 미래</div>
+                <div class="videoText alignRight">CONNECTS <img src="/src/main/resources/static/img/main/main_line.png" style="width: 100px;"/> METAVERSE</div>
+                <div class="videoLastText alignRight">메타버스 세계를 잇는 새로운 미래</div>
             </div>
         </div>
     
@@ -282,7 +273,7 @@
                         <div class="imgTag vr">VR Store</div>
                         <img src="/src/main/resources/static/img/main/portfolio1.png" class="pfImg"/>
                         <ul class="pfText">
-                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfDate"></li>
                             <li class="pfInfo">국내 유일</li>
                         </ul>
                     </div>
@@ -290,7 +281,7 @@
                         <div class="imgTag ar">AR Sunglass</div>
                         <img src="/src/main/resources/static/img/main/portfolio2.png" class="pfImg"/>
                         <ul class="pfText">
-                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfDate"></li>
                             <li class="pfInfo">얼굴 인식 기반</li>
                         </ul>
                     </div>
@@ -298,7 +289,7 @@
                         <div class="imgTag">AR Watch</div>
                         <img src="/src/main/resources/static/img/main/portfolio3.png" class="pfImg"/>
                         <ul class="pfText">
-                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfDate"></li>
                             <li class="pfInfo">이미지 인식 기반</li>
                         </ul>
                     </div>
@@ -306,7 +297,7 @@
                         <div class="imgTag">Drone</div>
                         <img src="/src/main/resources/static/img/main/portfolio4.png" class="pfImg"/>
                         <ul class="pfText">
-                            <li class="pfDate">2021.10.25</li>
+                            <li class="pfDate"></li>
                             <li class="pfInfo">드론을 이용 도로점유현황</li>
                         </ul>
                     </div>
@@ -322,9 +313,11 @@
         </div>
     </div>
     <div class="bannerCon">
-        <div id="bannerText">
-            <span style="color: var(--color-yellow);">yellotail</span> is a creative technology lab that delivers ground experiences through web<br/> 
-            and mobile development, user experience design and innovative engineering services.
+        <div style="width: 56%;margin: 0 auto;">
+            <div id="bannerText">
+                <span style="color: var(--color-yellow);">yellotail</span> is a creative technology lab that delivers ground experiences through web<br/> 
+                and mobile development, user experience design and innovative engineering services.
+            </div>
         </div>
         <div id="bannerBox"><img src="/src/main/resources/static/img/main/banner2.jpg" id="banner"></div>
     </div>
