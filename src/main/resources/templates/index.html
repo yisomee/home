@@ -34,8 +34,7 @@
             --font-size-m: 0.81rem;/*13px*/
             --font-size-s: 0.75rem;/*12px*/
             --font-size-10: 0.36rem;
-            --font-size-xs: 0.56rem;/*9px*/
-            
+            --font-size-xs: 0.56rem;/*9px*/            
 
             /*font*/
             --font-noto: 'Noto Sans KR';
@@ -45,37 +44,32 @@
             --weight-600: 600;
             --weight-700: 700;
         }
+
         body{font-family: var(--font-pop);}
         a:link, a:hover, a:visited {text-decoration:none;}
 	    ul, li {margin:0;padding:0;list-style-type:none;}
         /* nav */
-        nav, .navMenu, .navLanguage, .subMenu{display: flex;flex-direction: row;justify-content: space-around;font-family: var(--font-pop);}
+        nav, .navMenu, .navLanguage{display: flex;flex-direction: row;justify-content: space-around;font-family: var(--font-pop);}
         nav{height: 80px;align-items: center;border-bottom: 1px solid var(--color-white);}
         .navTotal{position: fixed;width: 100%;z-index: 1;}
         #logoImg{height: 23px; width: 120px;}
-        .navMenu{/*width: 541px;*/width: 36%;font-size: var(--font-size-l);margin-right: 95px;}
-        /* .navMenu>li a{width: 16%;} */
+        .navMenu>li a:hover{border-bottom: 4px solid var(--color-darkgray);}
+        .navMenu{width: 36%;font-size: var(--font-size-l);margin-right: 95px;}
         .navMenu>li a{color: var(--color-white);font-weight: var(--weight-600);padding:0 29px 27px 29px;}
         .navLanguage{width: 42px;}
         .navLanguage>li a{font-size: var(--font-size-xs);color: var(--color-white);font-weight: var(--weight-600);}
-        .subMenuList{border-left: 1px solid var(--color-lightgray);width: 10%;padding:20px 0 0 15px;height: 160px;}
-        .subMenuList>li{padding-bottom: 10px;}
-        
-        
-      
-        .subMenu{background-color: var(--color-white);border-bottom: 1px solid var(--color-lightgray);}
-        .subMenuList li:not(:first-of-type){font-size: var(--font-size-s);color: var(--color-deepgray);}
-        .subMenuList li:not(:first-of-type) a{color: var(--color-mediumlightgray);}
-        .subTitle{font-size: var(--font-size-m);font-weight: var(--weight-600);color: var(--color-deepgray);}
-        .subTitle:hover{color:var(--color-deepgray);}
+
         .text{color: var(--color-white);width: 56%;margin:0 auto;font-family: var(--font-pop);position: relative; top: -560px;}
+        #video{object-fit:fill;}
+        video{width: 100%; height: 100%;position: relative;top: -128px;}
+        .videoCon{height: 80vh;width: 100%;overflow: hidden;background-color: white;}
         .videoText{font-size: 3.75rem;font-weight: 700;}
         .videoLastText{font-size: var(--font-size-s);font-weight: var(--weight-600);}
         .alignRight{text-align: right;}
 
         .d-flex{width: 56%;margin: 0 auto; font-size: var(--font-size-xxl);font-weight: var(--weight-700);font-family: var(--font-pop);margin-bottom: 30px;}
         .pfSection{color: var(--color-mediumgray)}
-        .pfImg{width: 340px; height: 250px;}
+        .pfImg{width: 100%; height: 250px;}
         .imgTag{background-color: var(--color-blue);width: 80px;height: 20px;color: var(--color-white);font-size: var(--font-size-s);text-align: center;position: relative;top: 20px;}
         .pfDate{font-size: var(--font-size-10);color: var(--color-white);}
         .pfInfo{font-size:18px; color: var(--color-white);font-family: var(--font-noto); font-weight: 700;}
@@ -85,11 +79,10 @@
         .contentCon>div{margin-right: 20px;}
         .totalBackground{background-color: white;}
 
-
         #more{font-size: 16px;}
         .moreBtn{width: 12px; height: 12px;}
         .yellotailIs{padding: 100px 0 50px 0;margin: 0 auto;}
-        #incubatingImg{width: 1033px; height: 338px;margin-bottom: 150px;}
+        #incubatingImg{width: 57%; ;margin-bottom: 150px;}
         .incubatingSection{text-align: center;}
 
         #banner{width: 100vw; height: 100vh; }
@@ -100,7 +93,7 @@
         .clintsSection{padding-top: 130px;background-color: white;}
         #clients{font-size: var(--font-size-xxl);font-weight: var(--weight-700);width: 56%;margin: 0 auto;}
         .clintsList{display: flex;justify-content: space-between; width:58%; flex-wrap: wrap; margin: 0 auto;}
-        .clintsList>li img{width: 156.8px; height: 80px;/*margin: 25px 56px 25px 0;*/margin: 25px 20px;}
+        .clintsList>li img{width: 156.8px; height: 80px;margin: 25px 20px;}
         .topBtn{width: 56%;text-align: end;margin: 0 auto;font-size: 2em;padding: 110px 0px 40px 0;}
 
         #footerLogo{width: 120px;height: 23px;}
@@ -112,20 +105,6 @@
         .footerTop>div button{background-color: var(--color-darkgray);border: 1px solid white;border-radius: 6px; color: white;padding:10px 50px}
         .footerInfo{width: 89%;padding-left: 62px;}
         #footerEmail{border-bottom: 1px solid white;padding-bottom: 18px;margin-bottom: 18px;}
-
-        .navMenu>li a:hover{
-		    border-bottom: 4px solid var(--color-darkgray);
-        }
-        .subMenu ul {display: block;} 
-        .subMenu ul li {position: relative;} 
-        .subMenuList li:not(:first-of-type)::after {position: absolute; content:""; display: block; border-bottom: 2px solid var(--color-darkgray); transition: width 250ms ease-in-out;/*left: auto;*/ width: 0;} 
-        .subMenuList li:not(:first-of-type):hover::after {width: 20%;}
-
-        #video{object-fit:fill;}
-        video{width: 100%; height: 100%;position: relative;top: -128px;}
-        .videoCon{height: 80vh;width: 100%;overflow: hidden;background-color: white;}
-        
-    
     </style>
     <script type="text/javascript">  
         $("document").ready(function() {  
@@ -134,7 +113,6 @@
         
                 var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다. 
                 console.log(position);
-                console.log("ff");
                 //스크롤 시 nav색 변경
                 if (position >= 100){               
                     $('nav').css("background-color","white").css("border-bottom","1px solid #C4C4C4");
@@ -158,109 +136,57 @@
                     $('.pfSection').css("color","#333333");
                     $('.moreBtn').attr('src','/src/main/resources/static/img/main/btn_more.png')
                 }       
-            });
-            $('nav, .subMenu').hover(function(){
-                if($(".subMenu").css("display") == "none"){
-                    $('nav').css("background-color","white").css("border-bottom","1px solid #C4C4C4");
-                    $('.navMenu>li a, .navLanguage>li a').css("color","#333333");
-                    $('#logoImg').attr("src", "/src/main/resources/static/img/main/logo_black.png");  
-                    $(".subMenu").show(); 
-                } else {
-                    $('nav').css("background-color","").css("color","white").css("border-bottom","1px solid white");
-                    $('.navMenu>li a, .navLanguage>li a').css("color","white");
-                    $('#logoImg').attr("src", "/src/main/resources/static/img/main/logo_white.png");
-                    $(".subMenu").hide(); 
-                }
-            });
-
-     
+            });    
         }); 
-
     </script> 
 </head>
 <body>
     <span id="top"></span>
-
-        <div class="navTotal"> 
-            <nav>
-                <a href="/src/main/resources/templates/index.html"><img src="/src/main/resources/static/img/main/logo_white.png" id="logoImg"/></a>
-                <ul class="navMenu">
-                    <li>
-                        <a href="/src/main/resources/templates/about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#">Metaverse</a>
-                    </li>
-                    <li>
-                        <a href="#">Technology</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-                <ul class="navLanguage">
-                    <li>
-                        <a href="#">KO</a>
-                    </li>
-                    <li>
-                        <a href="#">|</a>
-                    </li>
-                    <li>
-                        <a href="#">EN</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="subMenu" style="display: none;">
-                <ul style="width: 20%;"></ul>
-                <ul class="subMenuList">
-                    <li><a class="subTitle" href="#">About</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                </ul>
-                <ul class="subMenuList">
-                    <li><a class="subTitle" href="#">Portfolio</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                </ul>
-                <ul class="subMenuList">
-                    <li><a class="subTitle" href="#">Metaverse</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                </ul>
-                <ul class="subMenuList">
-                    <li><a class="subTitle"href="#">Technology</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                </ul>
-                <ul class="subMenuList" style="border-right: 1px solid var(--color-lightgray);"> 
-                    <li><a class="subTitle" href="#">Contact</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                    <li><a href="#">임시</a></li>
-                </ul>
-                <ul style="width: 20%;"></ul>
-            </div>
+    <div class="navTotal"> 
+        <nav>
+            <a href="/src/main/resources/templates/index.html"><img src="/src/main/resources/static/img/main/logo_white.png" id="logoImg"/></a>
+            <ul class="navMenu">
+                <li>
+                    <a href="/src/main/resources/templates/about.html">About</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="/src/main/resources/templates/metaverse.html">Metaverse</a>
+                </li>
+                <li>
+                    <a href="/src/main/resources/templates/technonlogy.html">Technology</a>
+                </li>
+                <li>
+                    <a href="/src/main/resources/templates/contact.html">Contact</a>
+                </li>
+            </ul>
+            <ul class="navLanguage">
+                <li>
+                    <a href="#">KO</a>
+                </li>
+                <li>
+                    <a href="#" style="color: #C4C4C4;">|</a>
+                </li>
+                <li>
+                    <a href="#" style="color: #C4C4C4;">EN</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="videoCon">
+        <video id="video" autoplay loop muted>
+            <source src="/src/main/resources/static/img/main/main.mp4" type="video/mp4"/>
+        </video>
+    </div>
+    <div style="position: absolute;width: 100%;">
+        <div class="text">
+            <div class="videoText">A NEW FUTURE</div>
+            <div class="videoText alignRight">CONNECTS <img src="/src/main/resources/static/img/main/main_line.png" style="width: 100px;"/> METAVERSE</div>
+            <div class="videoLastText alignRight">메타버스 세계를 잇는 새로운 미래</div>
         </div>
-        <div class="videoCon">
-            <video id="video" autoplay loop muted>
-               <source src="/src/main/resources/static/img/main/main.mp4" type="video/mp4"/>
-           </video>
-        </div>
-        <div style="position: absolute;width: 100%;">
-            <div class="text">
-                <div class="videoText">A NEW FUTURE</div>
-                <div class="videoText alignRight">CONNECTS <img src="/src/main/resources/static/img/main/main_line.png" style="width: 100px;"/> METAVERSE</div>
-                <div class="videoLastText alignRight">메타버스 세계를 잇는 새로운 미래</div>
-            </div>
-        </div>
-    
+    </div>   
     <div class="totalBackground">
         <div style="padding-bottom:200px;">
             <div class="d-flex justify-content-between pfSection">
@@ -309,7 +235,7 @@
                 <div><span style="color:var(--color-blue);">yellotail</span><span id="is">is</span></div>
                 <div id="more">more  <img src="/src/main/resources/static/img/main/btn_more.png" class="moreBtn"/></div>
             </div>
-            <div class="incubatingSection"><img src="/src/main/resources/static/img/main/yellotail_incubating.png" id="incubatingImg"/></div>
+            <div class="incubatingSection"><img src="/src/main/resources/static/img/main/main_diagram.png" id="incubatingImg"/></div>
         </div>
     </div>
     <div class="bannerCon">
