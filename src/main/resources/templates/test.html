@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+            :root{
+            /* color */
+            --color-yellow: #FFDA1A;
+            --color-deepgray: #252424;
+            --color-darkgray: #232323;
+            --color-mediumgray: #333333;
+            --color-gray: #4A4A4A;
+            --color-mediumlightgray: #999999;
+            --color-lightgray: #C4C4C4;
+            --color-ivory: #FCF6F5;
+            --color-white: #FFFFFF;
+            --color-deepblue: #2264FF;
+            --color-mediumblue: #0079FF;
+            --color-blue: #227DFF;
+            --color-lightblue: #5BD9FF;
+            
+            /* size */
+            --font-size-xxl: 28px;/*28px*/
+            --font-size-l: 0.88rem;/*14px*/
+            --font-size-m: 0.81rem;/*13px*/
+            --font-size-s: 0.75rem;/*12px*/
+            --font-size-10: 0.36rem;
+            --font-size-xs: 0.56rem;/*9px*/           
+
+            /*font*/
+            --font-noto: 'Noto Sans KR';
+            --font-pop: 'Poppins';
+
+            /*font weight*/
+            --weight-600: 600;
+            --weight-700: 700;
+        }
+        body{margin: 0 auto;font-family: var(--font-pop);}
+        a:link, a:hover, a:visited {text-decoration:none;}
+        ul, li {margin:0;padding:0;list-style-type:none;}
+
+        #aboutBanner{width: 100%; height: 290px;}
+        #metaverseImg{width: 100%; height: 500px;}
+        #bannerText_big{font-size: 2.81rem;font-weight: var(--weight-600);color: white;}
+        #bannerText{color: white;font-weight: 500;font-size: 1.13rem;position: relative;top: -184px;left: 330px;}
+
+        .headerCon{margin: 14px auto 150px;width: 64%;}
+        #topHeaderText{color: var(--color-blue); font-weight:700; font-size: 1.75rem;}
+        .totalText{display: flex;font-family: var(--font-noto);justify-content: space-between;margin: 38px 0 100px 0;}
+        #text1{font-size: 1.13rem;font-weight: 700;}
+        #text2{font-size: 1.13rem;font-weight: 400;}
+        #bannerImgCon{text-align: center;} 
+        #metaverseImg{width: 100%; height: 500px;}
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div>
+            <img src="/src/main/resources/static/img/about/about_banner.png" id="aboutBanner"/>
+        </div>
+        <div id="bannerText">
+            <span id="bannerText_big">회사소개</span><br/>About Yellotail
+        </div>
+    </div>
+    <div class="headerCon">
+        <div id="topHeaderText">yellotail Metaverse Platform</div>
+        <div class="totalText">
+            <div id="text1">
+                ㈜ 옐로테일은 17년 역사의 국내 DB 데이터 컨설팅 분야 강소기업<br/>
+                ㈜ 위즈베이스에서 4차산업 신기술 사업분야에 진출하여<br/> 
+                “ATLAS DT 플랫폼”과 “메타버스 플랫폼인 SEED META” 서비스를 구축
+            </div>
+            <div id="text2">
+                물리적 시공간적 한계, 장거리·원거리·해외 사무실간 이동으로 인한<br/>
+                비용, 시간을 최소화하는 초현실적 비즈니스 환경을 제공합니다. 현실<br/>
+                과 가상세계와의 근무환경 이질감을 최소화하고, 공통된 자아(自我)와<br/>
+                쌍방향 비즈니스 수행이 가능합니다. 현실과 유사한 실측 기반의 가상<br/>
+                 근무공간 모델링으로, 가상세계에서의 부동산·동산의 자산가치를 창<br/>
+                 조할 수 있습니다.
+            </div>
+        </div>
+        <div id="bannerImgCon" >
+            <img src="/src/main/resources/static/img/about/img_metaverse.png" id="metaverseImg"/>
+        </div>
+    </div>
+    
+</body>
+</html>

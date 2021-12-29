@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Technology</title>
+</head>
+<style>
+       :root{
+            /* color */
+            --color-yellow: #FFDA1A;
+            --color-deepgray: #252424;
+            --color-darkgray: #232323;
+            --color-mediumgray: #333333;
+            --color-gray: #4A4A4A;
+            --color-mediumlightgray: #999999;
+            --color-lightgray: #C4C4C4;
+            --color-ivory: #FCF6F5;
+            --color-white: #FFFFFF;
+            --color-deepblue: #2264FF;
+            --color-mediumblue: #0079FF;
+            --color-blue: #227DFF;
+            --color-lightblue: #5BD9FF;
+            
+            /* size */
+            --font-size-xxl: 28px;/*28px*/
+            --font-size-l: 0.88rem;/*14px*/
+            --font-size-m: 0.81rem;/*13px*/
+            --font-size-s: 0.75rem;/*12px*/
+            --font-size-10: 0.36rem;
+            --font-size-xs: 0.56rem;/*9px*/           
+
+            /*font*/
+            --font-noto: 'Noto Sans KR';
+            --font-pop: 'Poppins';
+
+            /*font weight*/
+            --weight-600: 600;
+            --weight-700: 700;
+        }
+    body{margin: 0 auto;}
+    a:link, a:hover, a:visited {text-decoration:none;}
+    ul, li {margin:0;padding:0;list-style-type:none;}
+    nav, .navMenu, .navLanguage, .subMenu{display: flex;flex-direction: row;justify-content: space-around;font-family: var(--font-pop);}
+    nav{height: 80px;align-items: center;border-bottom: 1px solid #C4C4C4;}
+    .navMenu>li a:hover{border-bottom: 4px solid var(--color-darkgray);}
+    #logoImg{height: 23px; width: 120px;}
+    .navMenu{width: 36%;font-size: var(--font-size-l);margin-right: 95px;}
+    .navMenu>li a{color: #333333;font-weight: var(--weight-600);padding:0 29px 27px 29px;}
+    .navLanguage{width: 42px;}
+    .navLanguage>li a{font-size: var(--font-size-xs);color:#333333;font-weight: var(--weight-600);}
+     #techBanner{width: 100%; height: 290px;}
+    .banner{height: 290px;}
+    #bannerText_big{font-size: 2.81rem;font-weight:600;color: white;}
+    #bannerText{color: white;font-weight: 500;font-size: 1.13rem;position: relative;top: -184px;left: 330px;}
+    #conTitle{font-family: var(--font-noto);font-weight: 700; font-size: 1.75rem;}
+    .conText{font-family: var(--font-noto);font-weight: 400;font-size: 1.13rem;padding: 150px 0 60px 0;}
+    .background{background-color: #F3F5F7;}
+    .arCon, .industryCon{width: 64%;margin: 0 auto;}
+    .arCon{padding-bottom: 170px;}
+    #arImg, #industryImg{width: 100%;}
+    .topBtn{text-align: end;margin: 130px 0 60px 0;width: 100%;}      
+    #footerLogo{width: 120px;height: 23px;}
+    footer{background-color: var(--color-darkgray);color: var(--color-white);font-size: 15px;font-family: var(--font-noto);font-weight: 400;}
+    .footerTotal{display: flex;width: 56%;margin: 0 auto;padding: 52px 0;}
+    .footerTop, .footerList{display: flex;justify-content: space-between;font-size: 15px;}
+    .footerList{width: 30%;}
+    .footerList>li a{color: var(--color-white);}
+    .footerTop>div button{background-color: var(--color-darkgray);border: 1px solid white;border-radius: 6px; color: white;padding:10px 50px;cursor: pointer;}
+    .footerInfo{width: 89%;padding-left: 62px;}
+    #footerEmail{border-bottom: 1px solid white;padding-bottom: 18px;margin-bottom: 18px;}    
+</style>
+<body>
+    <nav>
+        <a href="/src/main/resources/templates/index.html"><img src="/src/main/resources/static/img/main/logo_black.png" id="logoImg"/></a>
+        <ul class="navMenu">
+            <li>
+                <a href="/src/main/resources/templates/about.html">About</a>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="/src/main/resources/templates/metaverse.html">Metaverse</a>
+            </li>
+            <li>
+                <a href="/src/main/resources/templates/technonlogy.html">Technology</a>
+            </li>
+            <li>
+                <a href="/src/main/resources/templates/contact.html">Contact</a>
+            </li>
+        </ul>
+        <ul class="navLanguage">
+            <!-- <li>
+                <a href="#">KO</a>
+            </li>
+            <li>
+                <a href="#" style="color: #C4C4C4;">|</a>
+            </li>
+            <li>
+                <a href="#" style="color: #C4C4C4;">EN</a>
+            </li> -->
+        </ul>
+    </nav>
+    <div class="banner">
+        <div>
+            <img src="/src/main/resources/static/img/technology/banner.png" id="techBanner"/>
+        </div>
+        <div id="bannerText">
+            <span id="bannerText_big">기술소개</span><br/>Technology
+        </div>
+    </div>
+    <div class="background">
+        <div class="arCon">
+            <div class="conText">
+                <span id="conTitle">ATLAS AR 커넥티드 엔터프라이즈의 혜택</span><br/>
+                가상증강현실 기반위에 각 현장에 맞는 데이터 통합 커스텀 솔루션 서비스 제공
+            </div>
+            <div>
+                <img src="/src/main/resources/static/img/technology/1.atlas ar.png" id="arImg">
+            </div>
+        </div>
+    </div>
+    <div class="industryCon">
+        <div class="conText">
+            <span id="conTitle">ATLAS AR 커넥티드 엔터프라이즈의 혜택</span><br/>
+            가상증강현실 기반위에 각 현장에 맞는 데이터 통합 커스텀 솔루션 서비스 제공
+        </div>
+        <div>
+            <img src="/src/main/resources/static/img/technology/2.industry.png" id="industryImg">
+        </div>
+        <div class="topBtn"><a href="#"><img src="/src/main/resources/static/img/main/btn_top.png" id="logoImg" style="width: 50px; height: 50px;"/></a></div>
+    </div>
+    <footer>
+        <div class="footerTotal">
+            <div><img src="/src/main/resources/static/img/main/logo_white.png" id="footerLogo"/></div>
+            <div class="footerInfo">
+                <div class="footerTop">
+                    <ul class="footerList">
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li>|</li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <div><button>문의 하기</button></div>
+                </div>
+                <div>서울 성동구 성수일로4길 25, 19층</div>             
+                <div>TEL : 02-465-3737</div>
+                <div id="footerEmail">EMAIL : info@yellotail.com</div>
+                <div>Copyrights © 2017 All Rights Reserved by Yellotail.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

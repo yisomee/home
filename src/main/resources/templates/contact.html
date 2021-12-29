@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Contact</title>
+    <style>
+          :root{
+            /* color */
+            --color-yellow: #FFDA1A;
+            --color-deepgray: #252424;
+            --color-darkgray: #232323;
+            --color-mediumgray: #333333;
+            --color-gray: #4A4A4A;
+            --color-mediumlightgray: #999999;
+            --color-lightgray: #C4C4C4;
+            --color-ivory: #FCF6F5;
+            --color-white: #FFFFFF;
+            --color-deepblue: #2264FF;
+            --color-mediumblue: #0079FF;
+            --color-blue: #227DFF;
+            --color-lightblue: #5BD9FF;
+            
+            /* size */
+            --font-size-xxl: 28px;/*28px*/
+            --font-size-l: 0.88rem;/*14px*/
+            --font-size-m: 0.81rem;/*13px*/
+            --font-size-s: 0.75rem;/*12px*/
+            --font-size-10: 0.36rem;
+            --font-size-xs: 0.56rem;/*9px*/           
+
+            /*font*/
+            --font-noto: 'Noto Sans KR';
+            --font-pop: 'Poppins';
+
+            /*font weight*/
+            --weight-600: 600;
+            --weight-700: 700;
+        }
+        body{margin: 0 auto;font-family: var(--font-pop);}
+        a:link, a:hover, a:visited {text-decoration:none;}
+        ul, li {margin:0;padding:0;list-style-type:none;}
+        nav, .navMenu, .navLanguage, .subMenu{display: flex;flex-direction: row;justify-content: space-around;font-family: var(--font-pop);}
+        .navMenu>li a:hover{border-bottom: 4px solid var(--color-darkgray);}
+        nav{height: 80px;align-items: center;border-bottom: 1px solid #C4C4C4;}
+        #logoImg{height: 23px; width: 120px;}
+        .navMenu{width: 36%;font-size: var(--font-size-l);margin-right: 95px;}
+        .navMenu>li a{color: #333333;font-weight: var(--weight-600);padding:0 29px 27px 29px;}
+        .navLanguage{width: 42px;}
+        .navLanguage>li a{font-size: var(--font-size-xs);color:#333333;font-weight: var(--weight-600);}
+        #aboutBanner{width: 100%; height: 290px;}
+        #bannerText{color: white;font-weight: 600;font-size: 2.81rem;position: relative;top: -184px;left: 330px;}
+        .banner{height: 290px;}
+        .addCon{display: flex;justify-content: space-between; width: 65%;margin: 0 auto;padding: 150px 0;}
+        #mapImg{width: 100%;}
+        .mapCon{width: 70%;}
+        #headTitle{font-weight: 700;font-family: var(--font-noto);font-size: 1.75rem;}
+        #contentText{font-family: var(--font-noto);font-size: 1.13rem;padding-top: 20px;}
+        .textCon{display: flex;flex-direction: column;justify-content: end;}
+        .topBtn{width: 65%;text-align: end;margin: 0 auto 60px;}
+        #footerLogo{width: 120px;height: 23px;}
+        footer{background-color: var(--color-darkgray);color: var(--color-white);font-size: 15px;font-family: var(--font-noto);font-weight: 400;}
+        .footerTotal{display: flex;width: 56%;margin: 0 auto;padding: 52px 0;}
+        .footerTop, .footerList{display: flex;justify-content: space-between;font-size: 15px;}
+        .footerList{width: 30%;}
+        .footerList>li a{color: var(--color-white);}
+        .footerTop>div button{background-color: var(--color-darkgray);border: 1px solid white;border-radius: 6px; color: white;padding:10px 50px;cursor: pointer;}
+        .footerInfo{width: 89%;padding-left: 62px;}
+        #footerEmail{border-bottom: 1px solid white;padding-bottom: 18px;margin-bottom: 18px;}   
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/src/main/resources/templates/index.html"><img src="/src/main/resources/static/img/main/logo_black.png" id="logoImg"/></a>
+        <ul class="navMenu">
+            <li>
+                <a href="/src/main/resources/templates/about.html">About</a>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="/src/main/resources/templates/metaverse.html">Metaverse</a>
+            </li>
+            <li>
+                <a href="/src/main/resources/templates/technonlogy.html">Technology</a>
+            </li>
+            <li>
+                <a href="/src/main/resources/templates/contact.html">Contact</a>
+            </li>
+        </ul>
+        <ul class="navLanguage">
+            <!-- <li>
+                <a href="#">KO</a>
+            </li>
+            <li>
+                <a href="#" style="color: #C4C4C4;">|</a>
+            </li>
+            <li>
+                <a href="#" style="color: #C4C4C4;">EN</a>
+            </li> -->
+        </ul>
+    </nav>
+    <div class="banner">
+        <div>
+            <img src="/src/main/resources/static/img/contact/contact_banner.png" id="aboutBanner"/>
+        </div>
+        <div id="bannerText">
+            Contact
+        </div>
+    </div>
+    <div class="addCon">
+        <div class="mapCon">
+            <a href="https://map.naver.com/v5/search/%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%BC%EB%A1%9C4%EA%B8%B8%2025%20%EC%84%9C%EC%9A%B8%EC%88%B2%EC%BD%94%EC%98%A4%EB%A1%B1%EB%94%94%EC%A7%80%ED%84%B8%ED%83%80%EC%9B%8C%201%EC%B0%A8%20/place/19468651?c=14143287.7794714,4515028.9726144,18,0,0,0,dh"
+                target="_blank">
+                <img src="/src/main/resources/static/img/contact/map.png" id="mapImg"/>
+            </a>
+        </div>
+        <div class="textCon">
+            <div id="headTitle">Our Headquarters</div>
+            <div id="contentText">
+                성동구 성수일로4길 25<br/>
+                서울숲코오롱디지털타워 1차 19층<br/>
+                Phone: (02) 465 3737<br/>
+                Email: info@yellotail.com
+            </div>
+        </div>
+    </div>
+    <div class="topBtn"><a href="#"><img src="/src/main/resources/static/img/main/btn_top.png" id="logoImg" style="width: 50px; height: 50px;"/></a></div>
+    <footer>
+        <div class="footerTotal">
+            <div><img src="/src/main/resources/static/img/main/logo_white.png" id="footerLogo"/></div>
+            <div class="footerInfo">
+                <div class="footerTop">
+                    <ul class="footerList">
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li>|</li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <div><button>문의 하기</button></div>
+                </div>
+                <div>서울 성동구 성수일로4길 25, 19층</div>             
+                <div>TEL : 02-465-3737</div>
+                <div id="footerEmail">EMAIL : info@yellotail.com</div>
+                <div>Copyrights © 2017 All Rights Reserved by Yellotail.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
